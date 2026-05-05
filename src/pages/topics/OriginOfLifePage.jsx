@@ -50,27 +50,40 @@ function OriginOfLifePage() {
 
   const citations = [
     {
-      title: 'The Origins of Life on Earth',
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation: 'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for abiogenesis, Miller-Urey experiment, RNA World hypothesis, and early Earth conditions (Chapter 25).',
+    },
+    {
+      title: 'The Emergence of Life on Earth',
       author: 'Iris Fry',
       year: '2000',
-      fullCitation:
-        'Fry, I. (2000). The emergence of life on Earth: A historical and scientific overview. Rutgers University Press.',
+      fullCitation: 'Fry, I. (2000). The emergence of life on Earth: A historical and scientific overview. Rutgers University Press.',
       notes: 'Comprehensive overview of origin of life research.',
     },
     {
-      title: 'The RNA World',
+      title: 'The RNA World (2nd ed.)',
       author: 'Richard F. Gesteland & John F. Atkins (Editors)',
       year: '1999',
-      fullCitation:
-        'Gesteland, R. F., & Atkins, J. F. (Eds.). (1999). The RNA world (2nd ed.). Cold Spring Harbor Laboratory Press.',
+      fullCitation: 'Gesteland, R. F., & Atkins, J. F. (Eds.). (1999). The RNA world (2nd ed.). Cold Spring Harbor Laboratory Press.',
       notes: 'Collection of papers on RNA World hypothesis.',
+    },
+    {
+      title: 'Hydrothermal vent [Photograph]',
+      author: 'NOAA',
+      year: 'n.d.',
+      fullCitation: 'NOAA. (n.d.). Black smoker hydrothermal vent [Photograph]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/1/1e/Blacksmoker_in_Atlantic_Ocean.jpg',
+      url: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Blacksmoker_in_Atlantic_Ocean.jpg',
+      notes: 'Deep-sea hydrothermal vent, a candidate environment for the origin of life.',
     },
   ]
 
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.13</div>
+        <div className="topic-number">Unit 7.13</div>
         <h1>Origin of Life on Earth</h1>
         <p>Scientific explanations for how life began on our planet.</p>
       </div>
@@ -159,6 +172,27 @@ function OriginOfLifePage() {
           <p>
             Complex organic molecules have been detected near hydrothermal vents, supporting this hypothesis.
           </p>
+
+          {/* Image: Hydrothermal Vent */}
+          <figure style={{ marginTop: '1rem', background: '#07110b', padding: '0.5rem', borderRadius: 8 }}>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Blacksmoker_in_Atlantic_Ocean.jpg"
+              alt="Black smoker hydrothermal vent on the ocean floor, a candidate location for the origin of life"
+              style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '350px', objectFit: 'cover' }}
+              loading="lazy"
+            />
+            <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
+              Black smoker hydrothermal vent—deep-sea vents are a leading candidate for the environment where life originated. Source: NOAA via Wikimedia Commons
+              <div>
+                <a href="https://upload.wikimedia.org/wikipedia/commons/1/1e/Blacksmoker_in_Atlantic_Ocean.jpg" style={{ color: 'var(--secondary-green)' }}>
+                  https://commons.wikimedia.org/wiki/File:Blacksmoker_in_Atlantic_Ocean.jpg
+                </a>
+              </div>
+              <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
+                APA: NOAA. (n.d.). Black smoker hydrothermal vent [Photograph]. Wikimedia Commons.
+              </div>
+            </figcaption>
+          </figure>
         </div>
       </div>
 

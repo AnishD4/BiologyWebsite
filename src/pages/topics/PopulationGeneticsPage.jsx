@@ -50,11 +50,17 @@ function PopulationGeneticsPage() {
 
   const citations = [
     {
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation: 'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for population genetics, allele frequencies, genetic drift, gene flow, and mutation (Chapter 23).',
+    },
+    {
       title: 'Population Genetics',
       author: 'Hartl & Clark',
       year: '2007',
-      fullCitation:
-        'Hartl, D. L., & Clark, A. G. (2007). Principles of population genetics (4th ed.). Sinauer Associates.',
+      fullCitation: 'Hartl, D. L., & Clark, A. G. (2007). Principles of population genetics (4th ed.). Sinauer Associates.',
       notes: 'Standard reference for population genetics theory.',
     },
   ]
@@ -62,7 +68,7 @@ function PopulationGeneticsPage() {
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.4</div>
+        <div className="topic-number">Unit 7.4</div>
         <h1>Population Genetics</h1>
         <p>Understanding genetic variation and change in populations.</p>
       </div>
@@ -143,6 +149,27 @@ function PopulationGeneticsPage() {
           species (birds, insects) can carry alleles between populations. When habitat is fragmented, gene flow reduces, potentially
           leading to divergence between isolated populations.
         </p>
+
+        {/* Image: Genetic drift illustration */}
+        <figure style={{ marginTop: '1.5rem', background: '#07110b', padding: '0.75rem', borderRadius: 8 }}>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Genetic_drift_in_a_population_figure.png/800px-Genetic_drift_in_a_population_figure.png"
+            alt="Diagram illustrating genetic drift in small vs large populations"
+            style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '380px', objectFit: 'contain', background: '#0e1210' }}
+            loading="lazy"
+          />
+          <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
+            Genetic drift causes random fluctuations in allele frequencies, especially in small populations. Source: Wikimedia Commons
+            <div>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Genetic_drift_in_a_population_figure.png/800px-Genetic_drift_in_a_population_figure.png" style={{ color: 'var(--secondary-green)' }}>
+                https://commons.wikimedia.org/wiki/File:Genetic_drift_in_a_population_figure.png
+              </a>
+            </div>
+            <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
+              APA: Wikimedia Commons. (n.d.). Genetic drift in a population figure [Illustration]. Wikimedia Commons.
+            </div>
+          </figcaption>
+        </figure>
       </div>
 
       <EssentialQuestions questions={essentialQuestions} />

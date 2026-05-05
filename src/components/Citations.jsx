@@ -13,7 +13,7 @@ function Citations({ citations }) {
 
   return (
     <div className="section" style={{ marginTop: '3rem', background: 'transparent', borderLeft: '3px solid var(--accent-green)' }}>
-      <h3 style={{ color: 'var(--text-primary)' }}>References & Citations</h3>
+      <h3 style={{ color: 'var(--text-primary)' }}>References &amp; Citations</h3>
       <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>
         All citations are formatted in APA style. Click on any citation to expand details.
       </p>
@@ -25,13 +25,12 @@ function Citations({ citations }) {
             style={{
               marginBottom: '1rem',
               padding: '1rem',
-              background: 'transparent',
+              background: 'rgba(30, 219, 158, 0.04)',
               borderLeft: '4px solid var(--accent-green)',
               border: '1px solid var(--border-color)',
               borderRadius: '6px',
               cursor: 'pointer',
               boxShadow: 'none',
-              color: 'var(--black)',
             }}
             onClick={() => toggleExpand(index)}
             role="button"
@@ -43,28 +42,28 @@ function Citations({ citations }) {
                 <p style={{ margin: 0, fontWeight: 700, color: 'var(--accent-green)' }}>
                   {citation.title}
                 </p>
-                <p style={{ margin: '0.5rem 0 0 0', fontSize: '0.9rem', color: 'var(--black)' }}>
+                <p style={{ margin: '0.5rem 0 0 0', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
                   {citation.author && `${citation.author} • `}
                   {citation.year}
                 </p>
               </div>
               <span style={{ fontSize: '1.2rem', color: 'var(--accent-green)' }}>
-                {expandedIndex === index ? '-' : '+'}
+                {expandedIndex === index ? '−' : '+'}
               </span>
             </div>
 
             {expandedIndex === index && (
               <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)' }}>
-                <p style={{ marginBottom: '0.5rem', lineHeight: 1.6, color: 'var(--black)' }}>
+                <p style={{ marginBottom: '0.5rem', lineHeight: 1.6, color: 'var(--text-primary)' }}>
                   <strong>Full Citation (APA):</strong>
                 </p>
-                <p style={{ margin: '0.5rem 0', fontStyle: 'italic', lineHeight: 1.6, color: 'var(--black)' }}>
+                <p style={{ margin: '0.5rem 0', fontStyle: 'italic', lineHeight: 1.6, color: 'var(--text-secondary)' }}>
                   {citation.fullCitation}
                 </p>
 
                 {citation.url && (
                   <p style={{ marginTop: '1rem' }}>
-                    <strong style={{ color: 'var(--black)' }}>Source:</strong>{' '}
+                    <strong style={{ color: 'var(--text-primary)' }}>Source:</strong>{' '}
                     <a href={citation.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-green)' }}>
                       {citation.url}
                     </a>
@@ -72,8 +71,8 @@ function Citations({ citations }) {
                 )}
 
                 {citation.notes && (
-                  <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: 'var(--black)' }}>
-                    <strong style={{ color: 'var(--black)' }}>Notes:</strong> {citation.notes}
+                  <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                    <strong style={{ color: 'var(--text-primary)' }}>Notes:</strong> {citation.notes}
                   </p>
                 )}
               </div>

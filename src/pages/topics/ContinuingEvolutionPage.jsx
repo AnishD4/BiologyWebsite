@@ -39,19 +39,33 @@ function ContinuingEvolutionPage() {
 
   const citations = [
     {
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation: 'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for ongoing evolution, observable natural selection, and human-driven evolution (Chapters 22, 23).',
+    },
+    {
       title: 'The Beak of the Finch',
       author: 'Jonathan Weiner',
       year: '1994',
-      fullCitation:
-        'Weiner, J. (1994). The beak of the finch: A story of evolution in our time. Knopf.',
-      notes: 'Accessible account of ongoing evolution in Darwin\'s finches.',
+      fullCitation: 'Weiner, J. (1994). The beak of the finch: A story of evolution in our time. Knopf.',
+      notes: "Accessible account of ongoing evolution in Darwin's finches.",
+    },
+    {
+      title: 'MRSA bacteria [Photograph]',
+      author: 'NIAID / NIH',
+      year: 'n.d.',
+      fullCitation: 'National Institute of Allergy and Infectious Diseases. (n.d.). MRSA bacteria [Electron micrograph]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/d/d2/MRSA_SEM_9994_lores.jpg',
+      url: 'https://upload.wikimedia.org/wikipedia/commons/d/d2/MRSA_SEM_9994_lores.jpg',
+      notes: 'Scanning electron micrograph of MRSA bacteria, demonstrating antibiotic resistance evolution.',
     },
   ]
 
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.8</div>
+        <div className="topic-number">Unit 7.8</div>
         <h1>Continuing Evolution</h1>
         <p>Evidence that evolution is an ongoing process affecting modern organisms.</p>
       </div>
@@ -73,8 +87,30 @@ function ContinuingEvolutionPage() {
           <p>
             Bacteria evolve antibiotic resistance within years of antibiotic introduction. In hospitals, resistant bacteria increase in
             frequency as non-resistant bacteria are killed, often resulting in treatment failures. This is evolution occurring on
-            observable timescales due to intense selection pressure - a clear demonstration of natural selection in real-time.
+            observable timescales due to intense selection pressure—a clear demonstration of natural selection in real-time
+            (Campbell Biology, Ch. 23).
           </p>
+
+          {/* Image: MRSA */}
+          <figure style={{ marginTop: '1rem', background: '#07110b', padding: '0.5rem', borderRadius: 8 }}>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d2/MRSA_SEM_9994_lores.jpg"
+              alt="Scanning electron micrograph of MRSA (methicillin-resistant Staphylococcus aureus) bacteria"
+              style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '300px', objectFit: 'cover' }}
+              loading="lazy"
+            />
+            <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
+              MRSA bacteria—an example of rapid antibiotic resistance evolution. Source: NIAID / NIH via Wikimedia Commons
+              <div>
+                <a href="https://upload.wikimedia.org/wikipedia/commons/d/d2/MRSA_SEM_9994_lores.jpg" style={{ color: 'var(--secondary-green)' }}>
+                  https://commons.wikimedia.org/wiki/File:MRSA_SEM_9994_lores.jpg
+                </a>
+              </div>
+              <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
+                APA: NIAID. (n.d.). MRSA bacteria [Electron micrograph]. Wikimedia Commons.
+              </div>
+            </figcaption>
+          </figure>
         </div>
 
         <div className="subsection">

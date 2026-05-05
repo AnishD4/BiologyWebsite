@@ -52,6 +52,14 @@ function NaturalSelectionPage() {
 
   const citations = [
     {
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation:
+        'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for natural selection, fitness, selection coefficients, and types of selection (Chapter 23).',
+    },
+    {
       title: 'Evolutionary Biology',
       author: 'Douglas Futuyma & Mark Kirkpatrick',
       year: '2017',
@@ -81,7 +89,7 @@ function NaturalSelectionPage() {
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.2</div>
+        <div className="topic-number">Unit 7.2</div>
         <h1>Natural Selection: Mechanisms and Evidence</h1>
         <p>Exploring how natural selection changes populations at the genetic level.</p>
       </div>

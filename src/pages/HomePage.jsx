@@ -1,37 +1,39 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import AdditionalResources from '../components/AdditionalResources'
 
 function HomePage() {
   const features = [
     {
-      icon: '-',
+      icon: '01',
       title: 'Rainforest Context',
-      description: 'All concepts are explored through the lens of rainforest ecosystems, the most biodiverse regions on Earth.',
+      description: 'All concepts are explored through the lens of tropical rainforest ecosystems—the most biodiverse biome on Earth.',
     },
     {
-      icon: '-',
+      icon: '02',
       title: 'Interactive Learning',
-      description: 'Engage with quizzes, visualizations, and calculators to deepen your understanding of evolution. ',
+      description: 'Engage with quizzes, Hardy-Weinberg and Chi-square calculators, and visual diagrams to deepen your understanding.',
     },
     {
-      icon: '-',
+      icon: '03',
       title: 'Data & Evidence',
-      description: 'Explore real data from phylogenetic studies, genetic analysis, and fossil records from rainforests.',
+      description: 'Explore real data from phylogenetic studies, genetic analyses, fossil records, and molecular biology research.',
     },
     {
-      icon: '-',
-      title: 'Scientific Rigor',
-      description: 'All content is grounded in peer-reviewed research and aligned with educational standards.',
+      icon: '04',
+      title: 'Campbell Biology Aligned',
+      description: 'All content is grounded in Campbell Biology (12th ed.) and peer-reviewed research, aligned with AP Biology standards.',
     },
     {
-      icon: '-',
+      icon: '05',
       title: 'Complete Curriculum',
-      description: 'Covers all 13 essential evolution topics (7.1-7.13) with 25+ fundamental questions.',
+      description: 'Covers all 13 essential evolution topics (7.1–7.13) with 26+ essential questions answered in depth.',
     },
     {
-      icon: '-',
+      icon: '06',
       title: 'Real-World Application',
-      description: 'Understand how evolution shapes biodiversity and conservation strategies in tropical regions.',
+      description: 'Understand how evolution shapes biodiversity, conservation, and ecological dynamics in tropical regions.',
     },
   ]
 
@@ -55,12 +57,12 @@ function HomePage() {
     <div className="container">
       <section className="hero">
         <h1>Evolution in the Rainforest</h1>
-        <p>An Interactive Journey Through Evolution, Natural Selection, and Biodiversity</p>
+        <p>An Interactive Journey Through Evolution, Natural Selection, and Biodiversity — Aligned with Campbell Biology</p>
         <div className="hero-buttons">
           <Link to="/introduction" className="btn btn-primary">
             Start Learning
           </Link>
-          <button className="btn btn-outline" onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}>
+          <button className="btn btn-outline" onClick={() => document.getElementById('topics-section').scrollIntoView({ behavior: 'smooth' })}>
             Explore Topics
           </button>
         </div>
@@ -69,78 +71,83 @@ function HomePage() {
       <section style={{ marginBottom: '3rem' }}>
         <h2 style={{ marginBottom: '2rem' }}>Welcome to Your Evolution Learning Hub</h2>
         <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
-          This comprehensive website combines cutting-edge educational design with rigorous scientific content to help you master
-          the concepts of evolution. By exploring evolution through rainforest ecosystems, Earth's most biodiverse regions, you'll
-          understand not just <em>what</em> evolution is, but <em>how</em> it shapes the natural world we observe today.
+          This comprehensive website explores the mechanisms of evolution through the lens of tropical rainforest ecosystems—Earth's
+          most biodiverse biome. Drawing on content from <em>Campbell Biology</em> (Urry et al., 2020), this site connects key
+          evolutionary concepts to specific real-world examples from rainforest populations, helping you understand not just <em>what</em> evolution
+          is, but <em>how</em> it shapes the natural world we observe today.
         </p>
 
         <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-          Whether you're a student studying for exams, an educator seeking classroom resources, or simply curious about the diversity
-          of life on Earth, this interactive platform provides engaging content, visual explanations, and practical applications of
-          evolutionary theory.
+          Whether you are a student studying for AP Biology exams, an educator seeking classroom resources, or simply curious about the
+          diversity of life on Earth, this interactive platform provides engaging content, visual explanations, quantitative tools, and
+          practical applications of evolutionary theory.
         </p>
       </section>
 
       <section style={{ marginBottom: '3rem' }}>
-        <h2>Why the Rainforest?</h2>
+        <h2>Why the Tropical Rainforest?</h2>
         <div className="grid grid-2">
           <div className="card">
             <h3>Peak Biodiversity</h3>
             <p>
-              Rainforests cover only 6% of Earth's land surface but contain over 50% of all species. This incredible concentration
-              of biodiversity provides perfect case studies for understanding evolution in action.
+              Tropical rainforests cover roughly 6% of Earth's land surface yet harbor more than 50% of all terrestrial species
+              (Myers et al., 2000). This extraordinary concentration of biodiversity provides ideal case studies for understanding
+              evolution in action—from natural selection to speciation and extinction.
             </p>
           </div>
 
           <div className="card">
             <h3>Living Laboratory</h3>
             <p>
-              The rainforest is a dynamic ecosystem where evolution happens on observable timescales. Scientists can study natural
-              selection, adaptation, and speciation processes in real-time.
+              The rainforest is a dynamic ecosystem where evolution occurs on observable timescales. Researchers study natural
+              selection, adaptation, genetic drift, and speciation processes in real-time among populations of poison dart frogs,
+              tropical birds, orchids, and many other organisms.
             </p>
           </div>
 
           <div className="card">
             <h3>Rich Scientific Record</h3>
             <p>
-              From phylogenetic studies of poison dart frogs to genetic analysis of jaguar populations, rainforest research provides
-              compelling evidence for evolutionary theory.
+              From phylogenetic studies of Neotropical poison dart frogs (<em>Dendrobatidae</em>) to population genetics of jaguars
+              (<em>Panthera onca</em>), rainforest research provides compelling evidence for every facet of evolutionary theory
+              covered in Campbell Biology.
             </p>
           </div>
 
           <div className="card">
             <h3>Conservation Importance</h3>
             <p>
-              Understanding evolution in rainforests directly connects to conservation efforts and helps us protect endangered species
-              and maintain genetic diversity for future generations.
+              Understanding evolution in rainforests directly connects to conservation biology. Maintaining genetic diversity, preventing
+              extinction, and preserving gene flow corridors are all evolutionary principles critical to protecting endangered species
+              and sustaining ecosystems for future generations.
             </p>
           </div>
         </div>
 
-        {/* New: single illustrative rainforest image */}
+        {/* Illustrative rainforest image */}
         <figure style={{ marginTop: '1.5rem', background: 'transparent', padding: '0.5rem', borderRadius: 8 }}>
           <img
-            src="https://www.activewild.com/wp-content/uploads/2021/02/Rainforest-Animals.jpg"
-            alt="Multiple rainforest animals in habitat"
-            style={{ width: '100%', borderRadius: 6, display: 'block' }}
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Daintree_Rainforest.jpg"
+            alt="Dense tropical rainforest canopy in the Daintree, Australia"
+            style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '400px', objectFit: 'cover' }}
             loading="lazy"
           />
           <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
-            A variety of rainforest animals in their natural habitat. Source: ActiveWild
+            Dense tropical rainforest canopy in the Daintree, Australia. Source: Wikimedia Commons
             <div>
-              <a href="https://www.activewild.com/rainforest-animals-list/" style={{ color: 'var(--secondary-green)' }}>
-                https://www.activewild.com/rainforest-animals-list/
+              <a href="https://upload.wikimedia.org/wikipedia/commons/c/c0/Daintree_Rainforest.jpg" style={{ color: 'var(--secondary-green)' }}>
+                https://upload.wikimedia.org/wikipedia/commons/c/c0/Daintree_Rainforest.jpg
               </a>
             </div>
             <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
-              APA: ActiveWild. (n.d.). Rainforest animals [Photograph]. ActiveWild. https://www.activewild.com/rainforest-animals-list/
+              APA: Wikimedia Commons. (n.d.). Daintree Rainforest [Photograph]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/c/c0/Daintree_Rainforest.jpg
             </div>
           </figcaption>
         </figure>
       </section>
 
       <section style={{ marginBottom: '3rem' }}>
-        <h2>Key Features of This Course</h2>
+        <h2>Key Features of This Site</h2>
         <div className="features-grid">
           {features.map((feature, index) => (
             <div key={index} className="feature-card">
@@ -152,11 +159,11 @@ function HomePage() {
         </div>
       </section>
 
-      <section style={{ marginBottom: '3rem' }}>
-        <h2>Learning Topics (Standards 7.1 - 7.13)</h2>
-        <p style={{ marginBottom: '2rem', color: 'var(--text-light)' }}>
-          Click on any topic to explore comprehensive coverage including interactive visualizations, essential questions, and
-          practical applications.
+      <section id="topics-section" style={{ marginBottom: '3rem' }}>
+        <h2>Learning Topics (Units 7.1 – 7.13)</h2>
+        <p style={{ marginBottom: '2rem', color: 'var(--text-secondary)' }}>
+          Click on any topic to explore comprehensive content including interactive visualizations, essential questions with detailed
+          answers, quizzes, and real-world rainforest examples.
         </p>
 
         <div className="grid grid-3">
@@ -164,7 +171,7 @@ function HomePage() {
             <Link key={index} to={topic.path} style={{ textDecoration: 'none' }}>
               <div className="card" style={{ height: '100%', cursor: 'pointer', transition: 'all 0.3s ease' }}>
                 <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>{topic.icon}</div>
-                <h4>{topic.number}</h4>
+                <h4 style={{ color: 'var(--secondary-green)' }}>{topic.number}</h4>
                 <h3>{topic.title}</h3>
               </div>
             </Link>
@@ -178,48 +185,76 @@ function HomePage() {
           <div className="section">
             <h3>Reading & Learning</h3>
             <ol>
-              <li>Read the comprehensive content for each topic</li>
-              <li>Study real examples from rainforest ecosystems</li>
-              <li>Examine visual diagrams and phylogenetic trees</li>
-              <li>Review the essential questions for each section</li>
+              <li>Read the comprehensive content for each topic, aligned with Campbell Biology</li>
+              <li>Study real examples from tropical rainforest ecosystems</li>
+              <li>Examine visual diagrams, cladograms, and phylogenetic trees</li>
+              <li>Review the essential questions and detailed answers for each section</li>
             </ol>
           </div>
 
           <div className="section">
             <h3>Interactive Engagement</h3>
             <ol>
-              <li>Take quizzes to test your understanding</li>
-              <li>Use the Hardy-Weinberg calculator to explore genetics</li>
-              <li>Interact with visualizations and data</li>
-              <li>Track your progress through each topic</li>
+              <li>Take quizzes to test your understanding of each topic</li>
+              <li>Use the Hardy-Weinberg calculator and Chi-square test tool</li>
+              <li>Download and study cladogram diagrams</li>
+              <li>Explore numeric population genetics examples</li>
             </ol>
           </div>
         </div>
       </section>
 
       <section className="section" style={{ background: 'linear-gradient(135deg, rgba(45, 80, 22, 0.1) 0%, rgba(124, 179, 66, 0.1) 100%)' }}>
-        <h2>What You'll Learn</h2>
+        <h2>What You Will Learn</h2>
         <ul>
-          <li><strong>Natural Selection:</strong> How environmental pressures shape populations over time</li>
-          <li><strong>Genetic Diversity:</strong> The role of variation in population evolution and survival</li>
-          <li><strong>Population Genetics:</strong> Mathematical models explaining allele frequency changes</li>
-          <li><strong>Speciation:</strong> How new species arise through reproductive isolation</li>
-          <li><strong>Phylogenetics:</strong> How to read evolutionary trees and understand relationships between organisms</li>
-          <li><strong>Evidence of Evolution:</strong> Fossil records, DNA analysis, and structural similarities as proof of evolution</li>
-          <li><strong>Extinction:</strong> How species are lost and the consequences for biodiversity</li>
-          <li><strong>Origin of Life:</strong> Current scientific models for how life began on Earth</li>
+          <li><strong>Natural Selection:</strong> How environmental pressures drive differential survival and reproduction, changing allele frequencies over generations (Campbell Biology Ch. 23)</li>
+          <li><strong>Genetic Diversity:</strong> Why heritable variation is the raw material for evolution and essential for population resilience</li>
+          <li><strong>Population Genetics:</strong> Mathematical models (Hardy-Weinberg, Chi-square) explaining when and how allele frequencies change</li>
+          <li><strong>Speciation:</strong> How reproductive isolation and genetic divergence produce new species through allopatric, sympatric, and other modes</li>
+          <li><strong>Phylogenetics:</strong> How to read and construct evolutionary trees, cladograms, and dichotomous keys to infer relationships</li>
+          <li><strong>Evidence of Evolution:</strong> Fossil records, comparative anatomy, molecular homology, biogeography, and direct observation as converging lines of evidence</li>
+          <li><strong>Extinction & Adaptive Radiation:</strong> How species are lost, mass extinction events, and how extinction opens niches for surviving lineages</li>
+          <li><strong>Origin of Life:</strong> Scientific models for abiogenesis, the RNA World hypothesis, and early cellular evolution</li>
         </ul>
       </section>
 
-      <section style={{ textAlign: 'center', marginBottom: '3rem', padding: '2rem', background: 'var(--black)', borderRadius: '12px', boxShadow: 'var(--shadow)' }}>
+      <section style={{ textAlign: 'center', marginBottom: '3rem', padding: '2rem', background: 'var(--surface)', borderRadius: '12px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--border-color)' }}>
         <h2>Ready to Begin Your Evolution Journey?</h2>
         <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem' }}>
           Start with the introduction to natural selection or jump to any topic that interests you.
         </p>
         <Link to="/introduction" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
-          Start Exploring
+          Start Exploring →
         </Link>
       </section>
+
+      {/* Primary Reference */}
+      <section style={{ marginBottom: '2rem', padding: '1.5rem', background: 'rgba(30, 219, 158, 0.04)', borderRadius: '8px', borderLeft: '3px solid var(--accent-green)' }}>
+        <h3>Primary Reference</h3>
+        <p style={{ fontStyle: 'italic', fontSize: '0.95rem' }}>
+          Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). <em>Campbell Biology</em> (12th ed.). Pearson.
+        </p>
+      </section>
+
+      <AdditionalResources 
+        resources={[
+          {
+            title: 'CrashCourse Biology: Natural Selection',
+            url: 'https://www.youtube.com/watch?v=aTftyFboC_M',
+            description: 'An engaging video overview of natural selection and evolutionary fitness.'
+          },
+          {
+            title: 'Understanding Evolution (UC Berkeley)',
+            url: 'https://evolution.berkeley.edu/',
+            description: 'A comprehensive resource covering the mechanisms and evidence of evolution.'
+          },
+          {
+            title: 'Rainforest Trust: Conservation and Biodiversity',
+            url: 'https://www.rainforesttrust.org/',
+            description: 'Learn about the crucial role rainforests play in global biodiversity and ongoing conservation efforts.'
+          }
+        ]} 
+      />
     </div>
   )
 }

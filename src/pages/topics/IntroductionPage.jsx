@@ -3,6 +3,7 @@ import Quiz from '../../components/Quiz'
 import EssentialQuestions from '../../components/EssentialQuestions'
 import Citations from '../../components/Citations'
 import InteractiveVisualization from '../../components/InteractiveVisualization'
+import AdditionalResources from '../../components/AdditionalResources'
 
 function IntroductionPage() {
   const essentialQuestions = [
@@ -51,6 +52,14 @@ function IntroductionPage() {
 
   const citations = [
     {
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation:
+        'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for natural selection mechanisms, fitness, and adaptation (Chapters 22, 23).',
+    },
+    {
       title: 'On the Origin of Species',
       author: 'Charles Darwin',
       year: '1859',
@@ -73,11 +82,19 @@ function IntroductionPage() {
       year: '2015',
       fullCitation:
         'Smith, J., & Jones, K. (2015). Coevolution of toxins and warning signals in rainforest poison dart frogs. Journal of Tropical Ecology, 42(3), 234-251.',
-      url: 'https://example.com',
       notes: 'Case study of natural selection in tropical ecosystems.',
     },
 
     // Image citations (APA-format)
+    {
+      title: 'Rainforest Biology [Animated GIF]',
+      author: 'Giphy / Rainforest',
+      year: 'n.d.',
+      fullCitation:
+        'Giphy. (n.d.). Rainforest Biology [Animated GIF]. Giphy. https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyMTM1c2U5bHdnd2d0MDA0dGFkNXE2aXVwZHQ5ZWFhYWt6ZnE3dHB5cCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dtzBR6aPqkrTy/source.gif',
+      url: 'https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyMTM1c2U5bHdnd2d0MDA0dGFkNXE2aXVwZHQ5ZWFhYWt6ZnE3dHB5cCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dtzBR6aPqkrTy/source.gif',
+      notes: 'Animated GIF demonstrating the vibrant ecosystem of the tropical rainforest.',
+    },
     {
       title: 'Chiapas Rainforest canopy [Photograph]',
       author: 'Wikimedia Commons',
@@ -125,10 +142,28 @@ function IntroductionPage() {
     },
   ]
 
+  const additionalResources = [
+    {
+      title: 'CrashCourse Biology: Natural Selection',
+      url: 'https://www.youtube.com/watch?v=aTftyFboC_M',
+      description: 'An engaging video overview of natural selection and evolutionary fitness.'
+    },
+    {
+      title: 'Understanding Evolution (UC Berkeley)',
+      url: 'https://evolution.berkeley.edu/',
+      description: 'A comprehensive resource covering the mechanisms and evidence of evolution.'
+    },
+    {
+      title: 'Rainforest Trust: Conservation and Biodiversity',
+      url: 'https://www.rainforesttrust.org/',
+      description: 'Learn about the crucial role rainforests play in global biodiversity and ongoing conservation efforts.'
+    }
+  ]
+
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.1</div>
+        <div className="topic-number">Unit 7.1</div>
         <h1>Introduction to Natural Selection</h1>
         <p>
           Understanding the fundamental mechanism driving evolution and the diversity of life in Earth's ecosystems.
@@ -257,8 +292,23 @@ function IntroductionPage() {
 
       {/* New: Rainforest image gallery using the provided addresses with captions and source links */}
       <div className="content-section">
-        <h2>Rainforest Images</h2>
+        <h2>Rainforest Images & Media</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>
+          {/* GIF Requirement */}
+          <figure style={{ background: '#07110b', padding: '0.5rem', borderRadius: 8 }}>
+            <img
+              src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyMTM1c2U5bHdnd2d0MDA0dGFkNXE2aXVwZHQ5ZWFhYWt6ZnE3dHB5cCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dtzBR6aPqkrTy/source.gif"
+              alt="Rainforest Biology animated GIF"
+              style={{ width: '100%', borderRadius: 6, display: 'block' }}
+            />
+            <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-light)' }}>
+              Animated Rainforest Ecosystem. Source: Giphy
+              <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
+                <a href="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyMTM1c2U5bHdnd2d0MDA0dGFkNXE2aXVwZHQ5ZWFhYWt6ZnE3dHB5cCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dtzBR6aPqkrTy/source.gif" style={{ color: 'var(--secondary-green)' }}>View GIF</a>
+              </div>
+            </figcaption>
+          </figure>
+
           <figure style={{ background: '#07110b', padding: '0.5rem', borderRadius: 8 }}>
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/8/87/Chiapas_Rainforest_crop.jpg"
@@ -346,6 +396,8 @@ function IntroductionPage() {
       <EssentialQuestions questions={essentialQuestions} />
 
       <Quiz questions={quizQuestions} />
+
+      <AdditionalResources resources={additionalResources} />
 
       <Citations citations={citations} />
     </div>

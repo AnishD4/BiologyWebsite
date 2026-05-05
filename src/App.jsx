@@ -17,6 +17,7 @@ import SpeciationPage from './pages/topics/SpeciationPage'
 import ExtinctionPage from './pages/topics/ExtinctionPage'
 import VariationsPage from './pages/topics/VariationsPage'
 import OriginOfLifePage from './pages/topics/OriginOfLifePage'
+import ResourcesPage from './pages/ResourcesPage'
 import './styles/App.css'
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
               <Route path="/extinction" element={<ExtinctionPage />} />
               <Route path="/variations" element={<VariationsPage />} />
               <Route path="/origin-of-life" element={<OriginOfLifePage />} />
+              <Route path="/resources" element={<ResourcesPage />} />
             </Routes>
           </div>
         </div>

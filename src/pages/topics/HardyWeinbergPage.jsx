@@ -53,11 +53,17 @@ function HardyWeinbergPage() {
 
   const citations = [
     {
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation: 'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for Hardy-Weinberg equilibrium, the five conditions, population genetics equations, and detecting evolution (Chapter 23).',
+    },
+    {
       title: 'The Hardy-Weinberg Equilibrium',
       author: 'Hardy, G. H.',
       year: '1908',
-      fullCitation:
-        'Hardy, G. H. (1908). Mendelian proportions in a mixed population. Science, 28(706), 49-50.',
+      fullCitation: 'Hardy, G. H. (1908). Mendelian proportions in a mixed population. Science, 28(706), 49-50.',
       notes: 'The original paper establishing the Hardy-Weinberg principle.',
       url: 'https://www.jstor.org/stable/1625727',
     },
@@ -74,7 +80,7 @@ function HardyWeinbergPage() {
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.5</div>
+        <div className="topic-number">Unit 7.5</div>
         <h1>Hardy-Weinberg Equilibrium</h1>
         <p>Understanding genetic equilibrium and deviations from it in populations.</p>
       </div>
@@ -331,34 +337,54 @@ function HardyWeinbergPage() {
         <h2>Phylogeny exercise (cladogram)</h2>
         <p>Interpret the cladogram below and answer the questions that follow.</p>
 
-        <div style={{ marginTop: '0.75rem' }}>
-          {/* Minimal inline SVG cladogram using theme colors */}
-          <svg id="cladogram-svg" width="100%" height="160" viewBox="0 0 600 160" role="img" aria-label="Simple cladogram showing relationships between four species">
-            <g stroke="var(--text-secondary)" strokeWidth="2" fill="none">
-              <line x1="20" y1="20" x2="120" y2="20" stroke="var(--text-secondary)" />
-              <line x1="120" y1="20" x2="120" y2="60" stroke="var(--text-secondary)" />
+        <div style={{ marginTop: '0.75rem', background: '#0a1610', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+          {/* Detailed realistic rainforest cladogram */}
+          <svg id="cladogram-svg" width="100%" height="320" viewBox="0 0 650 320" role="img" aria-label="Rainforest species cladogram showing evolutionary traits">
+            <rect width="100%" height="100%" fill="transparent" />
+            <g stroke="var(--secondary-green)" strokeWidth="3" fill="none">
+              {/* Root and main backbone */}
+              <line x1="20" y1="96" x2="60" y2="96" />
+              <line x1="60" y1="40" x2="60" y2="152" />
+              <line x1="60" y1="40" x2="440" y2="40" />
+              <line x1="60" y1="152" x2="160" y2="152" />
+              <line x1="160" y1="100" x2="160" y2="205" />
+              <line x1="160" y1="100" x2="440" y2="100" />
+              <line x1="160" y1="205" x2="260" y2="205" />
+              <line x1="260" y1="160" x2="260" y2="250" />
+              <line x1="260" y1="160" x2="440" y2="160" />
+              <line x1="260" y1="250" x2="360" y2="250" />
+              <line x1="360" y1="220" x2="360" y2="280" />
+              <line x1="360" y1="220" x2="440" y2="220" />
+              <line x1="360" y1="280" x2="440" y2="280" />
 
-              <line x1="120" y1="60" x2="220" y2="60" stroke="var(--text-secondary)" />
-              <line x1="220" y1="60" x2="220" y2="100" stroke="var(--text-secondary)" />
+              {/* Synapomorphy Ticks */}
+              <line x1="110" y1="142" x2="110" y2="162" stroke="var(--accent-green)" strokeWidth="4" />
+              <line x1="210" y1="195" x2="210" y2="215" stroke="var(--accent-green)" strokeWidth="4" />
+              <line x1="310" y1="150" x2="310" y2="170" stroke="var(--accent-green)" strokeWidth="4" />
+              <line x1="310" y1="240" x2="310" y2="260" stroke="var(--accent-green)" strokeWidth="4" />
+              <line x1="400" y1="270" x2="400" y2="290" stroke="var(--accent-green)" strokeWidth="4" />
+            </g>
 
-              <line x1="220" y1="100" x2="320" y2="100" stroke="var(--text-secondary)" />
+            {/* Taxa Labels */}
+            <g fill="var(--text-primary)" fontSize="14" fontWeight="bold">
+              <text x="450" y="45">Arapaima (Fish)</text>
+              <text x="450" y="105">Poison Dart Frog (Amphibian)</text>
+              <text x="450" y="165">Jaguar (Mammal)</text>
+              <text x="450" y="225">Green Iguana (Reptile)</text>
+              <text x="450" y="285">Scarlet Macaw (Bird)</text>
+            </g>
 
-              <circle cx="20" cy="20" r="6" fill="var(--secondary-green)" />
-              <text x="30" y="25" fill="var(--text-primary)">Species A</text>
-
-              <circle cx="220" cy="60" r="6" fill="var(--secondary-green)" />
-              <text x="230" y="65" fill="var(--text-primary)">Species B</text>
-
-              <circle cx="320" cy="100" r="6" fill="var(--secondary-green)" />
-              <text x="330" y="105" fill="var(--text-primary)">Species C</text>
-
-              <line x1="220" y1="60" x2="220" y2="40" stroke="var(--text-secondary)" />
-              <circle cx="220" cy="40" r="6" fill="var(--secondary-green)" />
-              <text x="230" y="45" fill="var(--text-primary)">Species D</text>
+            {/* Derived Trait Labels */}
+            <g fill="var(--text-secondary)" fontSize="12" fontStyle="italic">
+              <text x="80" y="135">Four limbs</text>
+              <text x="175" y="190">Amniotic egg</text>
+              <text x="275" y="145">Hair &amp; milk</text>
+              <text x="275" y="235">Diapsid skull</text>
+              <text x="370" y="265">Feathers</text>
             </g>
           </svg>
 
-          <div style={{ marginTop: '0.5rem' }}>
+          <div style={{ marginTop: '1rem' }}>
             <button
               className="btn btn-secondary"
               onClick={() => {
@@ -382,11 +408,14 @@ function HardyWeinbergPage() {
             </button>
           </div>
 
-          <ol style={{ marginTop: '1rem' }}>
-            <li>Which pair shares the most recent common ancestor? (Answer: B and D share a node at x=220.)</li>
-            <li>Which species is most distantly related to Species A? (Answer: Species C in this simple tree.)</li>
-            <li>Which node represents the most recent speciation event? (Answer: the branch separating B and D.)</li>
-          </ol>
+          <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'rgba(30, 219, 158, 0.05)', borderRadius: '6px' }}>
+            <h4 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>Analysis Questions:</h4>
+            <ol style={{ marginLeft: '1.5rem', color: 'var(--text-secondary)' }}>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Which pair of species shares the most recent common ancestor?</strong><br/> (Answer: The Green Iguana and Scarlet Macaw share the most recent node on the right).</li>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Which species serves as the outgroup to the tetrapods?</strong><br/> (Answer: The Arapaima fish, as it splits off before the "Four limbs" trait evolves).</li>
+              <li><strong>Which derived trait (synapomorphy) is shared by Jaguars, Iguanas, and Macaws, but not by the Poison Dart Frog?</strong><br/> (Answer: The amniotic egg).</li>
+            </ol>
+          </div>
         </div>
       </div>
 

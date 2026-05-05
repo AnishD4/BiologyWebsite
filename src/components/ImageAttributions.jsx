@@ -3,7 +3,7 @@ import React from 'react'
 // Renders APA-style image attributions. Accepts props.images: array of {author,title,year,sourceUrl,license}
 export default function ImageAttributions({ images = [] }) {
   return (
-    <div className="card" style={{ background: 'transparent', color: 'var(--text-primary)', border: '1px solid var(--border-color)' }}>
+    <div className="card" style={{ background: 'rgba(30, 219, 158, 0.04)', color: 'var(--text-primary)', border: '1px solid var(--border-color)' }}>
       <h3 style={{ color: 'var(--text-primary)' }}>Image Attributions (APA)</h3>
       <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
         {images.map((img, i) => {
@@ -11,7 +11,7 @@ export default function ImageAttributions({ images = [] }) {
           const line = img.fullCitation || `${img.author || 'Unknown author'}. (${img.year || 'n.d.'}). ${img.title || 'Untitled image'} [Photograph]. ${img.site || ''}. ${img.sourceUrl || ''}`
 
           return (
-            <li key={i} style={{ color: 'var(--black)', marginBottom: '0.6rem', fontSize: '0.95rem' }}>
+            <li key={i} style={{ color: 'var(--text-secondary)', marginBottom: '0.6rem', fontSize: '0.95rem' }}>
               {line}
               {img.sourceUrl && (
                 <div style={{ marginTop: '0.25rem' }}>

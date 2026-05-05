@@ -52,18 +52,33 @@ function ArtificialSelectionPage() {
 
   const citations = [
     {
-      title: 'Artificial Selection',
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation: 'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for artificial selection, selective breeding, domestication, and its genetic consequences (Chapter 22).',
+    },
+    {
+      title: 'Domestication and Artificial Selection',
       author: 'Wayne & Vilà',
       year: '2021',
       fullCitation: 'Wayne, R. K., & Vilà, C. (2021). Domestication: Recent developments in understanding animal artificial selection. Nature Reviews Genetics, 22(3), 172-188.',
       notes: 'Comprehensive review of artificial selection mechanisms and impacts.',
+    },
+    {
+      title: 'Teosinte vs. modern corn [Photograph]',
+      author: 'Wikimedia Commons / John Doebley',
+      year: 'n.d.',
+      fullCitation: 'Doebley, J. (n.d.). Teosinte and modern corn comparison [Photograph]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/c/cb/Teosinte.png',
+      url: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Teosinte.png',
+      notes: 'Image showing the dramatic morphological difference between teosinte and domesticated maize, a classic example of artificial selection.',
     },
   ]
 
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.3</div>
+        <div className="topic-number">Unit 7.3</div>
         <h1>Artificial Selection</h1>
         <p>How humans direct evolution through selective breeding.</p>
       </div>
@@ -105,6 +120,27 @@ function ArtificialSelectionPage() {
             Indigenous rainforest peoples domesticated cacao (chocolate), rubber, and numerous other plants through artificial selection. They selected for fruit quality, yield, and disease resistance - the same process modern agriculture uses.
           </p>
         </div>
+
+        {/* Image: Teosinte vs Corn */}
+        <figure style={{ marginTop: '1.5rem', background: '#07110b', padding: '0.75rem', borderRadius: 8 }}>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Teosinte.png"
+            alt="Comparison of teosinte (wild ancestor) and modern corn, showing dramatic effects of artificial selection"
+            style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '380px', objectFit: 'contain', background: '#0e1210' }}
+            loading="lazy"
+          />
+          <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
+            Teosinte (left) vs. modern corn (right)—one of the most dramatic examples of artificial selection. Source: Wikimedia Commons / John Doebley
+            <div>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/c/cb/Teosinte.png" style={{ color: 'var(--secondary-green)' }}>
+                https://upload.wikimedia.org/wikipedia/commons/c/cb/Teosinte.png
+              </a>
+            </div>
+            <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
+              APA: Doebley, J. (n.d.). Teosinte and modern corn comparison [Photograph]. Wikimedia Commons.
+            </div>
+          </figcaption>
+        </figure>
       </div>
 
       <div className="content-section">

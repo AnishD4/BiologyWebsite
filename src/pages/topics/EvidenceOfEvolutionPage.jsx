@@ -51,6 +51,14 @@ function EvidenceOfEvolutionPage() {
 
   const citations = [
     {
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation:
+        'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for evolutionary evidence, homologous structures, fossil record, and molecular evidence (Chapters 22, 25, 26).',
+    },
+    {
       title: 'The Evidence for Evolution',
       author: 'Allan Hallam',
       year: '1997',
@@ -80,7 +88,7 @@ function EvidenceOfEvolutionPage() {
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.6</div>
+        <div className="topic-number">Unit 7.6</div>
         <h1>Evidence of Evolution</h1>
         <p>Multiple independent lines of evidence supporting evolutionary theory.</p>
       </div>
@@ -88,9 +96,9 @@ function EvidenceOfEvolutionPage() {
       <div className="content-section">
         <h2>Why Evidence for Evolution Matters</h2>
         <p>
-          Evolution is not just a theory - it\'s supported by overwhelming evidence from multiple independent scientific disciplines. When
-          paleontology, comparative anatomy, molecular biology, and geology all point to the same conclusion, we can be confident in the
-          theory.
+          Evolution is supported by overwhelming evidence from multiple independent scientific disciplines. As described in Campbell Biology
+          (Urry et al., 2020), when paleontology, comparative anatomy, molecular biology, biogeography, and geology all converge on the
+          same conclusion, we have powerful scientific support for evolutionary theory.
         </p>
       </div>
 

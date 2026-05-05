@@ -50,19 +50,33 @@ function SpeciationPage() {
 
   const citations = [
     {
-      title: 'Speciation and the Biospecies Concept',
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation: 'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for speciation modes, reproductive isolation, pre/postzygotic barriers (Chapter 24).',
+    },
+    {
+      title: 'Speciation and the Biological Species Concept',
       author: 'Ernst Mayr',
       year: '1942',
-      fullCitation:
-        'Mayr, E. (1942). Systematics and the origin of species from the viewpoint of a zoologist. Columbia University Press.',
+      fullCitation: 'Mayr, E. (1942). Systematics and the origin of species from the viewpoint of a zoologist. Columbia University Press.',
       notes: 'Foundational work on speciation mechanisms.',
+    },
+    {
+      title: 'Galápagos finch adaptive radiation [Photograph]',
+      author: 'Wikimedia Commons',
+      year: 'n.d.',
+      fullCitation: "Wikimedia Commons. (n.d.). Darwin's finches [Illustration]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/a/ae/Darwin%27s_finches_by_Gould.jpg",
+      url: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Darwin%27s_finches_by_Gould.jpg",
+      notes: "John Gould's illustration of Darwin's finches showing beak diversity from adaptive radiation.",
     },
   ]
 
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.10</div>
+        <div className="topic-number">Unit 7.10</div>
         <h1>Speciation</h1>
         <p>Understanding how new species arise through evolution.</p>
       </div>
@@ -174,6 +188,27 @@ function SpeciationPage() {
           over millions of years. Recent habitat fragmentation creates "instant allopatry," potentially driving rapid speciation in some
           groups while causing extinction in others.
         </p>
+
+        {/* Image: Darwin's finches */}
+        <figure style={{ marginTop: '1.5rem', background: '#07110b', padding: '0.75rem', borderRadius: 8 }}>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Darwin%27s_finches_by_Gould.jpg"
+            alt="Darwin's finches by John Gould, showing beak diversity from adaptive radiation and speciation"
+            style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '380px', objectFit: 'contain', background: '#0e1210' }}
+            loading="lazy"
+          />
+          <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
+            Darwin's finches (by John Gould)—a classic example of adaptive radiation and speciation on the Galápagos Islands.
+            <div>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/a/ae/Darwin%27s_finches_by_Gould.jpg" style={{ color: 'var(--secondary-green)' }}>
+                https://commons.wikimedia.org/wiki/File:Darwin%27s_finches_by_Gould.jpg
+              </a>
+            </div>
+            <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
+              APA: Gould, J. (1845). Darwin's finches [Illustration]. Wikimedia Commons.
+            </div>
+          </figcaption>
+        </figure>
       </div>
 
       <EssentialQuestions questions={essentialQuestions} />

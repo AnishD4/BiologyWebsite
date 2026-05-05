@@ -50,19 +50,33 @@ function ExtinctionPage() {
 
   const citations = [
     {
-      title: 'The Fifth Extinction',
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation: 'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for extinction events, mass extinctions, adaptive radiation, and the Sixth Extinction (Chapter 25).',
+    },
+    {
+      title: 'The Sixth Extinction',
       author: 'Richard Leakey & Roger Lewin',
       year: '1995',
-      fullCitation:
-        'Leakey, R. E., & Lewin, R. (1995). The sixth extinction: Patterns of life and the future of humankind. Doubleday.',
+      fullCitation: 'Leakey, R. E., & Lewin, R. (1995). The sixth extinction: Patterns of life and the future of humankind. Doubleday.',
       notes: 'Discussion of extinction and current biodiversity crisis.',
+    },
+    {
+      title: 'Chicxulub asteroid impact illustration',
+      author: 'NASA / Don Davis',
+      year: 'n.d.',
+      fullCitation: 'NASA / Don Davis. (n.d.). Chicxulub asteroid impact [Illustration]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/b/b5/Chicxulub_impact_-_artist_impression.jpg',
+      url: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Chicxulub_impact_-_artist_impression.jpg',
+      notes: "Artist's impression of the asteroid impact that caused the end-Cretaceous mass extinction.",
     },
   ]
 
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.11</div>
+        <div className="topic-number">Unit 7.11</div>
         <h1>Extinction</h1>
         <p>Understanding species loss and its consequences for biodiversity.</p>
       </div>
@@ -209,6 +223,27 @@ function ExtinctionPage() {
           <strong>Example:</strong> Dinosaur extinction 66 million years ago allowed mammals to diversify, eventually giving rise to all
           modern mammals including rainforest species.
         </p>
+
+        {/* Image: Asteroid Impact */}
+        <figure style={{ marginTop: '1.5rem', background: '#07110b', padding: '0.75rem', borderRadius: 8 }}>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Chicxulub_impact_-_artist_impression.jpg"
+            alt="Artist impression of the Chicxulub asteroid impact that caused the end-Cretaceous mass extinction"
+            style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '350px', objectFit: 'cover' }}
+            loading="lazy"
+          />
+          <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
+            Artist's impression of the Chicxulub asteroid impact (~66 mya) that caused the end-Cretaceous mass extinction. Source: NASA / Don Davis via Wikimedia Commons
+            <div>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/b/b5/Chicxulub_impact_-_artist_impression.jpg" style={{ color: 'var(--secondary-green)' }}>
+                https://commons.wikimedia.org/wiki/File:Chicxulub_impact_-_artist_impression.jpg
+              </a>
+            </div>
+            <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
+              APA: NASA / Don Davis. (n.d.). Chicxulub asteroid impact [Illustration]. Wikimedia Commons.
+            </div>
+          </figcaption>
+        </figure>
       </div>
 
       <div className="content-section">

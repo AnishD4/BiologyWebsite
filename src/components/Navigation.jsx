@@ -62,6 +62,17 @@ function Navigation({ isOpen, closeMenu }) {
             </NavLink>
           </li>
         ))}
+
+        <li className="nav-category">Extras</li>
+        <li className="nav-item">
+          <NavLink
+            to="/resources"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            <span>+</span> Additional Resources
+          </NavLink>
+        </li>
       </ul>
     </nav>
   )

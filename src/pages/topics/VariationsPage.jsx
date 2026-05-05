@@ -50,19 +50,33 @@ function VariationsPage() {
 
   const citations = [
     {
-      title: 'Genetic Diversity and Conservation',
-      author: 'Andrew Frankham',
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation: 'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for genetic variation, sources of variation, and population fitness (Chapters 23, 24).',
+    },
+    {
+      title: 'Genetics and Extinction',
+      author: 'Richard Frankham',
       year: '2005',
-      fullCitation:
-        'Frankham, R. (2005). Genetics and extinction. Biological Conservation, 126(2), 131-140.',
+      fullCitation: 'Frankham, R. (2005). Genetics and extinction. Biological Conservation, 126(2), 131-140.',
       notes: 'Review of genetic diversity in conservation.',
+    },
+    {
+      title: 'Jaguar in rainforest [Photograph]',
+      author: 'Wikimedia Commons',
+      year: 'n.d.',
+      fullCitation: 'Wikimedia Commons. (n.d.). Jaguar (Panthera onca) [Photograph]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/0/0a/Standing_jaguar.jpg',
+      url: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Standing_jaguar.jpg',
+      notes: 'Photograph of a jaguar, illustrating species impacted by genetic diversity loss in fragmented rainforest habitats.',
     },
   ]
 
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.12</div>
+        <div className="topic-number">Unit 7.12</div>
         <h1>Variations in Population</h1>
         <p>Understanding genetic diversity and its importance for population survival.</p>
       </div>
@@ -158,6 +172,27 @@ function VariationsPage() {
             environmental changes.
           </p>
         </div>
+
+        {/* Image: Jaguar */}
+        <figure style={{ marginTop: '1.5rem', background: '#07110b', padding: '0.75rem', borderRadius: 8 }}>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Standing_jaguar.jpg"
+            alt="Jaguar (Panthera onca) in natural habitat, a species affected by genetic diversity loss from habitat fragmentation"
+            style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '380px', objectFit: 'cover' }}
+            loading="lazy"
+          />
+          <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
+            Jaguar (<em>Panthera onca</em>)—a species severely affected by genetic diversity loss from rainforest fragmentation. Source: Wikimedia Commons
+            <div>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/0/0a/Standing_jaguar.jpg" style={{ color: 'var(--secondary-green)' }}>
+                https://commons.wikimedia.org/wiki/File:Standing_jaguar.jpg
+              </a>
+            </div>
+            <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
+              APA: Wikimedia Commons. (n.d.). Jaguar (Panthera onca) [Photograph]. Wikimedia Commons.
+            </div>
+          </figcaption>
+        </figure>
       </div>
 
       <div className="content-section">

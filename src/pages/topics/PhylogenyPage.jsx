@@ -50,11 +50,17 @@ function PhylogenyPage() {
 
   const citations = [
     {
-      title: 'Phylogenetic Reconstruction',
+      title: 'Campbell Biology (12th ed.)',
+      author: 'Urry, Cain, Wasserman, Minorsky, & Reece',
+      year: '2020',
+      fullCitation: 'Urry, L. A., Cain, M. L., Wasserman, S. A., Minorsky, P. V., & Reece, J. B. (2020). Campbell Biology (12th ed.). Pearson.',
+      notes: 'Primary textbook reference for phylogeny, cladistics, synapomorphies, phylogenetic trees, and molecular phylogenetics (Chapter 26).',
+    },
+    {
+      title: 'Molecular Evolutionary Genetics',
       author: 'Masatoshi Nei',
       year: '1987',
-      fullCitation:
-        'Nei, M. (1987). Molecular evolutionary genetics. Columbia University Press.',
+      fullCitation: 'Nei, M. (1987). Molecular evolutionary genetics. Columbia University Press.',
       notes: 'Classic reference on phylogenetic methods.',
     },
   ]
@@ -62,7 +68,7 @@ function PhylogenyPage() {
   return (
     <div className="container">
       <div className="topic-header">
-        <div className="topic-number">Standard 7.9</div>
+        <div className="topic-number">Unit 7.9</div>
         <h1>Phylogeny</h1>
         <p>Understanding evolutionary relationships and how to interpret them.</p>
       </div>
@@ -165,6 +171,27 @@ function PhylogenyPage() {
           adaptation, and speciation. Recent molecular studies have revealed many surprising relationships that morphology alone couldn't
           show, leading to reorganization of rainforest species classifications.
         </p>
+
+        {/* Image: Phylogenetic tree example */}
+        <figure style={{ marginTop: '1.5rem', background: '#07110b', padding: '0.75rem', borderRadius: 8 }}>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Tree_of_life_SVG.svg/800px-Tree_of_life_SVG.svg.png"
+            alt="Tree of life showing evolutionary relationships among major groups of organisms"
+            style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '380px', objectFit: 'contain', background: '#0e1210' }}
+            loading="lazy"
+          />
+          <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
+            Simplified tree of life showing evolutionary relationships among major groups. Source: Wikimedia Commons
+            <div>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Tree_of_life_SVG.svg/800px-Tree_of_life_SVG.svg.png" style={{ color: 'var(--secondary-green)' }}>
+                https://commons.wikimedia.org/wiki/File:Tree_of_life_SVG.svg
+              </a>
+            </div>
+            <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
+              APA: Wikimedia Commons. (n.d.). Tree of life SVG [Illustration]. Wikimedia Commons.
+            </div>
+          </figcaption>
+        </figure>
       </div>
 
       <EssentialQuestions questions={essentialQuestions} />
