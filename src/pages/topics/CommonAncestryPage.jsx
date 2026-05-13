@@ -140,13 +140,13 @@ function CommonAncestryPage() {
         {/* Image: Tree of Life */}
         <figure style={{ marginTop: '1.5rem', background: '#07110b', padding: '0.75rem', borderRadius: 8 }}>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/1/19/Phylogenetic_Tree_of_Life.png"
-            alt="Phylogenetic Tree of Life showing three domains: Bacteria, Archaea, and Eukarya"
+            src="https://upload.wikimedia.org/wikipedia/commons/8/87/Chiapas_Rainforest_crop.jpg"
+            alt="Phylogenetic Tree of Life showing three domains"
             style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '420px', objectFit: 'contain', background: '#0e1210' }}
             loading="lazy"
           />
           <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
-            Phylogenetic Tree of Life showing three domains: Bacteria, Archaea, and Eukarya—all descended from LUCA.
+            Rainforest biodiversity representing the three domains of life
             <div>
               <a href="https://upload.wikimedia.org/wikipedia/commons/1/19/Phylogenetic_Tree_of_Life.png" style={{ color: 'var(--secondary-green)' }}>
                 https://upload.wikimedia.org/wikipedia/commons/1/19/Phylogenetic_Tree_of_Life.png
@@ -229,7 +229,7 @@ function CommonAncestryPage() {
             loading="lazy"
           />
           <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
-            The Blue Morpho butterfly (<em>Morpho menelaus</em>)—a quintessential rainforest species whose iridescent wing scales
+            The Blue Morpho butterfly (<em>Morpho menelaus</em>)—a quintessential rainforest species. Source: Wikimedia Commons
             evolved through natural selection. Source: Wikimedia Commons
             <div>
               <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Morpho_menelaus_huebneri_MHNT_Male.jpg/1280px-Morpho_menelaus_huebneri_MHNT_Male.jpg" style={{ color: 'var(--secondary-green)' }}>

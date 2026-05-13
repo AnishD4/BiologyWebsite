@@ -297,14 +297,17 @@ function IntroductionPage() {
           {/* GIF Requirement */}
           <figure style={{ background: '#07110b', padding: '0.5rem', borderRadius: 8 }}>
             <img
-              src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyMTM1c2U5bHdnd2d0MDA0dGFkNXE2aXVwZHQ5ZWFhYWt6ZnE3dHB5cCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dtzBR6aPqkrTy/source.gif"
-              alt="Rainforest Biology animated GIF"
-              style={{ width: '100%', borderRadius: 6, display: 'block' }}
+              src="https://mongabay-images.s3.amazonaws.com/1200/indonesia-kalbar/kalbar_drone_190493.jpg"
+              alt="Rainforest canopy aerial view from Kalbar, Indonesia"
+              style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '400px', objectFit: 'cover' }}
+              loading="lazy"
             />
             <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-light)' }}>
-              Animated Rainforest Ecosystem. Source: Giphy
+              Aerial rainforest canopy view from Kalbar, Indonesia. Source: Mongabay
               <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
-                <a href="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyMTM1c2U5bHdnd2d0MDA0dGFkNXE2aXVwZHQ5ZWFhYWt6ZnE3dHB5cCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dtzBR6aPqkrTy/source.gif" style={{ color: 'var(--secondary-green)' }}>View GIF</a>
+                <a href="https://mongabay-images.s3.amazonaws.com/1200/indonesia-kalbar/kalbar_drone_190493.jpg" style={{ color: 'var(--secondary-green)' }}>
+                  https://mongabay-images.s3.amazonaws.com/1200/indonesia-kalbar/kalbar_drone_190493.jpg
+                </a>
               </div>
             </figcaption>
           </figure>
@@ -359,7 +362,7 @@ function IntroductionPage() {
 
           <figure style={{ background: '#07110b', padding: '0.5rem', borderRadius: 8 }}>
             <img
-              src="https://www.amazoncruise.net/wp-content/uploads/2017/06/the-five-rarest-Amazon-rainforest-animals4.jpg"
+              src="https://www.amazoncruise.net/wp-content/uploads/2017/06/the-five-rarest-amazon-rainforest-animals4.jpg"
               alt="Rare Amazon rainforest animals"
               style={{ width: '100%', borderRadius: 6, display: 'block' }}
               loading="lazy"
@@ -376,7 +379,7 @@ function IntroductionPage() {
 
           <figure style={{ background: '#07110b', padding: '0.5rem', borderRadius: 8 }}>
             <img
-              src="https://trexperienceperu.com/sites/default/files/2024-12/Animales%2520de%2520la%2520Selva%2520Amaz%25C3%25B3nica%2520%25282%2529.webp"
+              src="https://trexperienceperu.com/sites/default/files/2024-12/Animales%20de%20la%20Selva%20Amaz%25C3%25B3nica%20%25282%2529.webp"
               alt="Amazon rainforest wildlife"
               style={{ width: '100%', borderRadius: 6, display: 'block' }}
               loading="lazy"

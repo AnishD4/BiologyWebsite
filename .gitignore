@@ -1,72 +1,9 @@
-# Node dependencies
 node_modules/
-
-# Build output
 dist/
-.build/
-.vite/
-.cache/
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Runtime files
-pids/
-*.pid
-*.seed
-*.pid.lock
-
-# dotenv environment variables
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Coverage directories
-coverage/
-coverage/**
-
-# IDE/editor directories
 .vscode/
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-
-# OS files
 .DS_Store
-Thumbs.db
-desktop.ini
-ehthumbs.db
-
-# Misc
-.pnp/
-.pnp.js
-.history/
-.tmp/
-.temp/
-
-# SSL
-*.pem
-*.key
-
-# Temporary folders
-tmp/
-temp/
-
-# MacOS
-.AppleDouble
-.LSOverride
-
-# Ignore lockfile if using a different package manager (uncomment if needed)
-# package-lock.json
-# yarn.lock
-# pnpm-lock.yaml
+npm-debug.log
+coverage/
+.idea/
 

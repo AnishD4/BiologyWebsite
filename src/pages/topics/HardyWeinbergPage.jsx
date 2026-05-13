@@ -246,9 +246,9 @@ function HardyWeinbergPage() {
           </p>
 
           <h3>Step 2 - Compute expected genotype frequencies under H-W</h3>
-          <p>{`Expected BB = p^2 = 0.65^2 = 0.4225 -> expected count = 0.4225 * 100 = 42.25`}</p>
-          <p>{`Expected Bb = 2pq = 2 * 0.65 * 0.35 = 0.455 -> expected count = 45.5`}</p>
-          <p>{`Expected bb = q^2 = 0.35^2 = 0.1225 -> expected count = 12.25`}</p>
+          <p>Expected BB = p^2 = 0.65^2 = 0.4225 &rarr; expected count = 0.4225 * 100 = 42.25</p>
+          <p>Expected Bb = 2pq = 2 * 0.65 * 0.35 = 0.455 &rarr; expected count = 45.5</p>
+          <p>Expected bb = q^2 = 0.35^2 = 0.1225 &rarr; expected count = 12.25</p>
 
           <h3>Step 3 - Chi-square test for Hardy-Weinberg</h3>
           <p>Chi-square statistic: chi^2 = sum (observed - expected)^2 / expected</p>
@@ -286,9 +286,9 @@ function HardyWeinbergPage() {
           <div className="section">
             <h3>Genetic drift - small population sampling</h3>
             <p>Example: A small rainforest bird population (N = 20) initially has p = 0.5 (A allele).</p>
-            <p>{`Generation 0: A count = 10/20 -> p = 0.50`}</p>
-            <p>{`Random sampling leads to Generation 1: A count = 12/20 -> p = 0.60`}</p>
-            <p>{`Generation 2: drift changed counts again to 9/20 -> p = 0.45`}</p>
+            <p>Generation 0: A count = 10/20 &rarr; p = 0.50</p>
+            <p>Random sampling leads to Generation 1: A count = 12/20 &rarr; p = 0.60</p>
+            <p>Generation 2: drift changed counts again to 9/20 &rarr; p = 0.45</p>
             <p>
               Interpretation: In small populations allele frequencies can jump around between generations due to sampling error (drift).
             </p>
@@ -297,7 +297,7 @@ function HardyWeinbergPage() {
           <div className="section">
             <h3>Natural selection - selection coefficient</h3>
             <p>
-              Example: Suppose allele A has a fitness advantage. Let w<sub>AA</sub> = 1, w<sub>Aa</sub> = 1, w<sub>aa</sub> = 1 - s with s = 0.1
+              Example: Suppose allele A has a fitness advantage. Let wAA = 1, wAa = 1, waa = 1 - s with s = 0.1
               (selection against aa). Starting p = 0.7, q = 0.3, compute expected genotype frequencies and show selection changes.
             </p>
             <p>Before selection: p^2 = 0.49, 2pq = 0.42, q^2 = 0.09</p>
@@ -315,9 +315,9 @@ function HardyWeinbergPage() {
           <div className="section">
             <h3>Migration (gene flow)</h3>
             <p>
-              Example: Island population (N = 50) with p<sub>island</sub> = 0.2. Mainland source population has p<sub>main</sub> = 0.8. Ten
-              migrants arrive and mix thoroughly. New frequency p<sub>new</sub> = (1 - m) p<sub>island</sub> + m p<sub>main</sub>, where
-              m = migrants / total after migration = 10/60 ~ 0.1667.
+              Example: Island population (N = 50) with <span>p<sub>island</sub> = 0.2</span>. Mainland source population has <span>p<sub>main</sub> = 0.8</span>.
+              Ten migrants arrive and mix thoroughly. New frequency <span>p<sub>new</sub> = (1 - m) p<sub>island</sub> + m p<sub>main</sub></span>, where
+              m = migrants / total after migration = 10/60 (~0.1667).
             </p>
             <p>{`p_new = (1 - 0.1667)*0.2 + 0.1667*0.8 ~ 0.1667 + 0.1333 = 0.30`}</p>
             <p>Interpretation: Gene flow moves allele frequencies toward the source population's values.</p>
@@ -428,7 +428,7 @@ function HardyWeinbergPage() {
         </p>
 
         <p>Starting with 1 species, the expected number after t = 1 million years under simple exponential growth is:</p>
-        <p>{`N(t) = N0 * e^((lambda - mu) * t) = 1 * e^(0.01 * 1) = e^(0.01) = 1.01005 (approximately 1.01 species)`}</p>
+        <p>N(t) = N0 * e^((lambda - mu) * t) = 1 * e^(0.01 * 1) = e^(0.01) = 1.01005 (approximately 1.01 species)</p>
 
         <p>
           Interpretation: With small positive net diversification, diversity increases slowly. If extinction rises (mu &gt; lambda) the lineage will

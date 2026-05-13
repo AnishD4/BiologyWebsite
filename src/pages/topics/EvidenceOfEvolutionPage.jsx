@@ -250,15 +250,15 @@ function EvidenceOfEvolutionPage() {
           </li>
         </ul>
 
-        <figure style={{ marginTop: '1rem', background: '#07110b', padding: '0.5rem', borderRadius: 8 }}>
+        <figure style={{ marginTop: '1.5rem', background: '#07110b', padding: '0.75rem', borderRadius: 8 }}>
           <img
             src="https://earth.org/wp-content/uploads/2022/02/3.jpg"
-            alt="Endangered rainforest species in a threatened habitat"
-            style={{ width: '100%', borderRadius: 6, display: 'block' }}
+            alt="Amazon rainforest endangered species showing morphological diversity"
+            style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '350px', objectFit: 'cover' }}
             loading="lazy"
           />
-          <figcaption style={{ marginTop: '0.5rem', color: '#bfffe6' }}>
-            Example of endangered rainforest species affected by habitat loss. Source: Earth.org
+          <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
+            Rainforest species showing remarkable morphological diversity—evidence of evolution and adaptation. Source: Earth.org
             <div>
               <a href="https://earth.org/amazon-rainforest-endangered-species/" style={{ color: '#00b36b' }}>
                 https://earth.org/amazon-rainforest-endangered-species/

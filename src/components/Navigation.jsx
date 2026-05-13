@@ -63,14 +63,23 @@ function Navigation({ isOpen, closeMenu }) {
           </li>
         ))}
 
-        <li className="nav-category">Extras</li>
+        <li className="nav-category">Reference</li>
+        <li className="nav-item">
+          <NavLink
+            to="/essential-questions"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            <span>EQ</span> Essential Questions
+          </NavLink>
+        </li>
         <li className="nav-item">
           <NavLink
             to="/resources"
             className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
             onClick={closeMenu}
           >
-            <span>+</span> Additional Resources
+            <span>📚</span> Resources
           </NavLink>
         </li>
       </ul>
@@ -79,4 +88,3 @@ function Navigation({ isOpen, closeMenu }) {
 }
 
 export default Navigation
-

@@ -127,20 +127,20 @@ function HomePage() {
         {/* Illustrative rainforest image */}
         <figure style={{ marginTop: '1.5rem', background: 'transparent', padding: '0.5rem', borderRadius: 8 }}>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Daintree_Rainforest.jpg"
-            alt="Dense tropical rainforest canopy in the Daintree, Australia"
+            src="https://upload.wikimedia.org/wikipedia/commons/8/87/Chiapas_Rainforest_crop.jpg"
+            alt="Dense tropical rainforest canopy in the Chiapas region"
             style={{ width: '100%', borderRadius: 6, display: 'block', maxHeight: '400px', objectFit: 'cover' }}
             loading="lazy"
           />
-          <figcaption style={{ marginTop: '0.5rem', color: 'var(--text-secondary)' }}>
-            Dense tropical rainforest canopy in the Daintree, Australia. Source: Wikimedia Commons
+          <figcaption style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+            Dense tropical rainforest canopy in the Chiapas region. Source: Wikimedia Commons
             <div>
-              <a href="https://upload.wikimedia.org/wikipedia/commons/c/c0/Daintree_Rainforest.jpg" style={{ color: 'var(--secondary-green)' }}>
-                https://upload.wikimedia.org/wikipedia/commons/c/c0/Daintree_Rainforest.jpg
+              <a href="https://upload.wikimedia.org/wikipedia/commons/8/87/Chiapas_Rainforest_crop.jpg" style={{ color: 'var(--secondary-green)' }}>
+                https://upload.wikimedia.org/wikipedia/commons/8/87/Chiapas_Rainforest_crop.jpg
               </a>
             </div>
             <div style={{ fontSize: '0.85rem', marginTop: '0.25rem', color: 'var(--text-secondary)' }}>
-              APA: Wikimedia Commons. (n.d.). Daintree Rainforest [Photograph]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/c/c0/Daintree_Rainforest.jpg
+              APA: Wikimedia Commons. (n.d.). Chiapas Rainforest [Photograph]. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/8/87/Chiapas_Rainforest_crop.jpg
             </div>
           </figcaption>
         </figure>
